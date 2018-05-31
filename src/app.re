@@ -6,6 +6,10 @@ let component = ReasonReact.statelessComponent("App");
 
 let make = (~message, _children) => {
   ...component,
+  didMount: _ => {
+    Js.log("test") /* ; missing semi */
+    Js.log("test2");
+  },
   render: _self =>
     <div className="App">
       <div className="App-header">
